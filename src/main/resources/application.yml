@@ -11,3 +11,8 @@ spring:
       hibernate:
         format-sql: true
         generate_statictic: true
+        ddl-auto: update
+
+taco:
+  orders:
+    pageSize: 10
