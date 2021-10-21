@@ -1,3 +1,13 @@
+taco:
+  orders:
+    pageSize: 10
+
+    discount:
+      codes:
+        abcdef: 10
+
+---
+
 spring:
   datasouce:
     url: jdbc:mysql://localhost:3306/taco
@@ -11,8 +21,11 @@ spring:
       hibernate:
         format-sql: true
         generate_statictic: true
-        ddl-auto: update
+        ddl-auto: validate
+  config:
+    activate:
+      on-profile: prod
 
-taco:
-  orders:
-    pageSize: 10
+logging:
+  level:
+    taco: WARN
